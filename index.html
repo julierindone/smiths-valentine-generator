@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<title>It's not like any other love</title>
+</head>
+
+<body class="open-sans-smiths rocker-boys" aria-label="Youth at a fair - Jürgen Vollmer, 'Rock 'N' Roll Times: The Style and Spirit of the Early Beatles and Their First Fans'">
+	<header id="header">
+		<div class="bodoni-moda-sc color-band">
+			<h1>Not Like Any Other Love</h1>
+			<p class="subheading open-sans-smiths">A Smiths/Morrissey Valentine Generator</p>
+		</div>
+	</header>
+	<main>
+		<div id="error-message"></div>
+		<form id="word-count-form" novalidate>
+			<div class="word-count-input-container">
+				<!-- NONESESSENTIAL -->
+				<!-- <div id="input-box">
+					<label for="word-count-input">Who is this for?</label>
+					<input type="text" id="" min="1" max="5000" placeholder="200" autocomplete="off"></input>
+				</div> -->
+				<!-- NONESESSENTIAL -->
+				 <!-- radios to chose smiths, Morrissey, or surprise  -->
+				<button type="submit" id="generate-smithsum-btn">generate valentine!</button>
+			</div>
+		</form>
+		<!-- valentine appears here -->
+		<div id="lyrics-container">
+			<!-- image container -->
+			<div id="lyrics-box">
+				<!-- image -->
+				<img id="lyrics-el" src="images/smiths/smiths3.jpg">
+			</div>
+			<!-- Not sure if I have time to pull this off -->
+			<!-- <button id="copy-btn">copy lyrics</button> -->
+			 <p>Unfortunately, I lacked the time to let you copy this as a jpeg, but you know how to take a screenshot and trim it, right?</p>
+		</div>
+	</main>
+	<footer id="footer">
+		<hr class="footer-top-line">
+		<hr class="footer-bottom-line">
+		<div class="footer-text-div">
+			<p>
+				All lyrics credited to (either) The&nbsp;Smiths or Morrissey.
+			</p>
+		</div>
+	</footer>
+	<script src="index.js" type="module"></script>
+</body>
+
+</html>

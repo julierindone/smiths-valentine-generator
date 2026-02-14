@@ -1,0 +1,43 @@
+/* 1. Box sizing reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins */
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Set sensible defaults */
+html {
+  font-size: 100%; /* 16px in most browsers */
+}
+
+body {
+  min-height: 100dvh;
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin-inline: auto;
+}
+
+/* 4. Make images and media easier to work with */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 6. Remove animations/transitions for people who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
