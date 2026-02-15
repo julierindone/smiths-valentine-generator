@@ -10,13 +10,13 @@ export const quotes = [
 		artist: `The Smiths`
 	},
 	{
-		lineOne: `I'd like to drop my trousers to the world.`,
+		lineOne: `I'd like to drop my trousers to the world`,
 		lineTwo: `(<em>You</em> are my world, Valentine.)`,
 		artist: `The Smiths`
 	},
 	{
 		lineOne: `I am writing this to say,<br>In a gentle way,`,
-		lineTwo: `<em>Thank you,<br> but no.</em>`,
+		lineTwo: `<em>Thank you, but no.</em>`,
 		artist: `Morrissey`
 	},
 	{
@@ -50,7 +50,7 @@ export const quotes = [
 		artist: `The Smiths`
 	},
 	{
-		lineOne: `<span style="font-size: 1.275em">Valentine,</span>`,
+		lineOne: `<span style="font-size: 1.32em">Valentine,</span>`,
 		lineTwo: `You can pin and mount me like a butterfly!`,
 		artist: `The Smiths`
 	},
@@ -100,7 +100,7 @@ export const quotes = [
 		artist: `The Smiths`
 	},
 	{
-		lineOne: `Scratch my name on your arm with a fountain pen.`,
+		lineOne: `Scratch my name on your arm with a fountain pen`,
 		lineTwo: `(This means you really love me.)`,
 		artist: `The Smiths`
 	},
@@ -155,14 +155,24 @@ export const quotes = [
 		artist: `Morrissey`
 	},
 	{
-		lineOne: `I know you love one person, so`,
+		lineOne: `I know you love one person, so...`,
 		lineTwo: `why don't you love two?`,
 		artist: `Morrissey`
 	},
 	{
-		lineOne: `Loot wine, be mine, and then`,
-		lineTwo: `let's stay out for the night, Valentine!`,
+		lineOne: `Loot wine, be mine,`,
+		lineTwo: `<span style="font-size: 0.95em">and then let's stay out for the night, Valentine!</span>`,
 		artist: `Morrissey`
+	},
+	{
+		lineOne: `Now my heart is full`,
+		lineTwo: `And I just can't explain, So I won't even try to.`,
+		artist: `Morrissey`
+	},
+	{
+		lineOne: `<span style="font-size: 0.75em;line-height: 1;">I never wanted to kill, I am not naturally evil!</span>`,
+		lineTwo: `<span style="font-size: 0.75em";line-height: 1;>Such things I do, Just to make myself more attractive to you,<br>Have I failed?</span`,
+		artist: `The Smiths`
 	},
 ]
 

@@ -236,7 +236,7 @@ button:active {
 	background-color: var(--white);
 	z-index: 1;
 	position: relative;
-	aspect-ratio: 5 / 7;
+	aspect-ratio: 9 / 14;
 }
 
 #valentine-image {
@@ -258,9 +258,9 @@ p.valentine-words {
 	width: 100%;
 	-webkit-text-stroke: 0.9px black;
 	text-shadow: 0 0 2px black;
-	line-height: 1.19;
+	line-height: 1.17;
 	text-transform: uppercase;
-	padding: 0 0.2rem;
+	padding: 0 0.32rem;
 	backdrop-filter: blur(0.75px);
 }
 
