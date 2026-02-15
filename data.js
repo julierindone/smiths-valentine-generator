@@ -10,21 +10,21 @@ export const quotes = [
 		artist: `The Smiths`
 	},
 	{
-		lineOne: `I'd lik to drop my trousers to the world.`,
+		lineOne: `I'd like to drop my trousers to the world.`,
 		lineTwo: `(<em>You</em> are my world, Valentine.)`,
 		artist: `The Smiths`
 	},
 	{
 		lineOne: `I am writing this to say,<br>In a gentle way`,
-		lineTwo: `<em>Thank you, but no.</em>`,
+		lineTwo: `<em>Thank you,<br> but no.</em>`,
+		artist: `Morrissey`
+	},
+	{
+		lineOne: `You're the one for me, fatty`,
+		lineTwo: `You're the one I really, really love!`,
 		artist: `Morrissey`
 	},
 	/*
-	{
-		lineOne: ``,
-		lineTwo: ``,
-		artist: `The Smiths`
-	},
 	{
 		lineOne: ``,
 		lineTwo: ``,

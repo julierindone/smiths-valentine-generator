@@ -21,40 +21,24 @@
 		</div>
 	</header>
 	<main>
-		<div id="error-message"></div>
-		<form id="word-count-form" novalidate>
-			<div class="word-count-input-container">
-				<!-- NONESESSENTIAL -->
-				<!-- <div id="input-box">
-					<label for="word-count-input">Who is this for?</label>
-					<input type="text" id="" min="1" max="5000" placeholder="200" autocomplete="off"></input>
-				</div> -->
-				<!-- NONESESSENTIAL -->
-				 <!-- radios to chose smiths, Morrissey, or surprise  -->
-				<button type="submit" id="generate-smithsum-btn">generate valentine!</button>
-			</div>
-		</form>
-		<!-- valentine appears here -->
-		<div id="lyrics-container">
-			<!-- image container -->
-			<div id="lyrics-box">
-				<!-- image -->
-				<img id="lyrics-el" src="images/smiths/smiths3.jpg">
-			</div>
-			<!-- Not sure if I have time to pull this off -->
-			<!-- <button id="copy-btn">copy lyrics</button> -->
-			 <p>Unfortunately, I lacked the time to let you copy this as a jpeg, but you know how to take a screenshot and trim it, right?</p>
+		<div class="word-count-input-container">
+			<button type="submit" id="submit-btn">generate valentine!</button>
 		</div>
+		<div id="valentine-container">
+		</div>
+		<p id="note">I didn't have time to make this copyable,
+			<br>but you know how to take a screenshot and crop it, right?
+		</p>
+		<footer id="footer">
+			<hr class="footer-top-line">
+			<hr class="footer-bottom-line">
+			<div class="footer-text-div">
+				<p>
+					All lyrics credited to The&nbsp;Smiths and/or Morrissey.
+				</p>
+			</div>
+		</footer>
 	</main>
-	<footer id="footer">
-		<hr class="footer-top-line">
-		<hr class="footer-bottom-line">
-		<div class="footer-text-div">
-			<p>
-				All lyrics credited to (either) The&nbsp;Smiths or Morrissey.
-			</p>
-		</div>
-	</footer>
 	<script src="index.js" type="module"></script>
 </body>
 

@@ -1,26 +1,30 @@
 :root {
+	--black: #101010;
 	--white: #fbfbfb;
 	--trans-white: #fbfbfb75;
 	--dark-gray: #2f2f2f;
-	--transp-plum: hsl(315, 20%, 52%, 0.50);
-	--light-plum: hsl(315, 26%, 58%);
-	--medium-plum: hsl(315, 40%, 47%);
-	--dark-plum: hsl(315, 64%, 20%);
-	--small-text: clamp(0.9rem, 0.852rem + 0.465vw, 1.05rem);
+	--transp-plum: hsl(315, 17%, 46%, 0.65);
+	--light-plum: hsl(315, 29%, 65%);
+	--medium-plum: hsl(315, 36%, 47%);
+	--dark-plum: hsl(315, 51%, 20%);
+	--small-text: clamp(0.8rem, 0.2rem + 3.265vw, 1.05rem);
 	--inline-padding-margins: clamp(0.7em, 0.4em + 1.9vw, 3.5em);
-	--top-margin: clamp(0.5em, -0.4em + 2.2vh, 1.2em);
+	--black-text-shadow:
+		0.35px 0.35px .25px var(--black),
+		0.35px -0.35px .25px var(--black),
+		-0.35px 0.35px .25px var(--black),
+		-0.35px -0.35px .25px var(--black);
 }
 
 /* Base sizing: (min-width:626px) and (max-width:1250px) */
 html {
 	height: 100dvh;
-	scrollbar-color: var(--light-plum) var(--trans-white);
 }
 
 body {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	min-height: 100%;
 	background-color: var(--dark-gray);
 	color: var(--white);
 }
@@ -42,7 +46,7 @@ main, footer {
 	font-family: "Open Sans", sans-serif;
 	font-optical-sizing: auto;
 	font-variation-settings: "wdth" 100;
-	letter-spacing: .012em;
+	/* letter-spacing: .012em; */
 }
 
 .rocker-boys {
@@ -56,13 +60,11 @@ main, footer {
 }
 
 .color-band {
-	/* background-color: var(--trans-ice-blue); */
 	background-color: var(--transp-plum);
 	display: flex;
 	flex-direction: column;
-	/* TODO: Fix the units on margin & padding blocks. */
-	margin-block: clamp(0.9rem, 0.5em + 2vw, 2em) 0;
-	padding-block: clamp(0.9rem, 0.5em + 2.4vw, 2em);
+	margin-block: clamp(0.5rem, 1vh, 2vh) 0;
+	padding-block: clamp(0.6rem, -0.4vh + 2.3vh, 2vh);
 	padding-inline: var(--inline-padding-margins);
 	backdrop-filter: blur(2px);
 
@@ -73,7 +75,7 @@ main, footer {
 	}
 
 	h1 {
-		font-size: clamp(1px, 6.1vw, 4rem);
+		font-size: clamp(0.7rem, 5.85vw, 3.5rem);
 		font-weight: 750;
 		word-spacing: 0.08em;
 		line-height: 1.22;
@@ -81,27 +83,27 @@ main, footer {
 		-webkit-text-stroke-width: .5px;
 		-webkit-text-stroke-color: var(--white);
 		max-width: 1000px;
+		text-shadow: var(--black-text-shadow);
 	}
 
 	.subheading {
-		font-size: clamp(0.8rem, 0.4rem + 2.5vw, 1.7rem);
-		font-weight: 375;
+		font-size: clamp(0.7rem, 0.2rem + 2.4vw, 1.5rem);
+		font-weight: 350;
 		word-spacing: 1.5px;
 		padding-left: .25em;
 		margin-top: .125em;
 	}
 }
 
-#error-message, .word-count-input-container, button {
-	font-size: var(--small-text);
-}
-
 main {
 	display: flex;
 	flex-direction: column;
-	flex-grow: 1;
+	flex: auto;
 	overflow-y: auto;
 	padding-inline: calc(1.2 * var(--inline-padding-margins));
+	justify-content: space-between;
+	/* justify-content: start; */
+	/* justify-self: self-start; */
 }
 
 footer {
@@ -143,34 +145,8 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	margin-top: var(--top-margin);
+	margin-top: clamp(0.5em, -0.4em + 2.5vh, 1.3em);
 	justify-content: end;
-}
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-	-moz-appearance: textfield;
-}
-
-#word-count-input {
-	/* color: var(--medium-ice-blue); */
-	color: var(--medium-plum);
-	font-size: 1.25em;
-	font-weight: 600;
-	text-align: center;
-	width: 5em;
-	background-color: var(--white);
-	opacity: 0.8;
-	border-radius: 5px;
-	border-color: var(--dark-plum);
-	height: 40px;
 }
 
 #input-box {
@@ -180,25 +156,7 @@ input[type=number] {
 	align-items: center;
 }
 
-#input-box label {
-	font-size: 1.15em;
-	font-weight: 350;
-	text-shadow: 0 0 1px black;
-	background-color: #00000010;
-	backdrop-filter: blur(6px);
-}
-
-#word-count-input:focus {
-	opacity: .72;
-}
-
-::placeholder {
-	color: var(--dark-plum);
-	opacity: 0.5;
-}
-
 button {
-	/* background-color: var(--trans-ice-blue); */
 	background-color: var(--transp-plum);
 	color: var(--white);
 	font-family: "Open Sans", sans-serif;
@@ -206,52 +164,37 @@ button {
 	font-weight: 550;
 	word-spacing: 1px;
 	text-shadow: 0.5px 0.5px 1px var(--dark-plum);
-	border: 1px solid var(--mediumplum);
-	border-radius: 7px;
-	box-shadow: 3px 3px 1px hsl(315, 30%, 30%, .8);
-	height: 46px;
+	border: 1px solid var(--medium-plum);
+	border-radius: 11px;
+	box-shadow: 3px 3px 1px hsl(315, 25%, 30%, .6);
+	height: 40px;
 	padding-inline: 1em;
 }
 
 @media (hover: hover) {
 	button:hover {
-		background-color: #71a2b1eb;
-		box-shadow: 3px 3px #4e7885f7;
-		transition: background-color .1s ease-in-out, box-shadow .1s ease-in-out;
+		background-color: hsla(315, 16%, 40%, 0.75);
+		box-shadow: 3px 3px hsla(315, 26%, 30%, 0.75);
+		/* transition: .1s ease-in-out, box-shadow 1.1s ease-in-out; */
 	}
 }
 
 button:active {
-	background-color: #5f8b99f2;
-	box-shadow: 2px 2px #3f626c;
-	transform: translateY(2px) translateX(2px) scale(98%);
+	background-color: hsl(315, 16%, 38%, 0.9);
+	box-shadow: 2px 2px hsl(315, 26%, 34, 0.9%);
+	transform: translateY(1px) translateX(1px) scale(98%);
 }
 
-#error-message p {
-	font-size: 1.05em;
-	color: #ff3c59;
-	font-weight: 500;
-	text-shadow: 0 0 1px black;
-	display: inline-block;
-	backdrop-filter: blur(5px);
-	padding: .06rem .05rem .06rem 0;
-	margin-block: .8rem 0;
-}
-
-#lyrics-container {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	overflow-y: auto;
+#valentine-container {
+	margin-block: 1.5rem;
+	border: black 0.5px solid;
+	padding: 20px;
+	background-color: white;
+	width: clamp(300px, 54vw, 350px);
+	margin-inline: auto;
+	display: none;
 	opacity: 0;
 	transition: opacity .25s 0s ease-out;
-
-	> #copy-btn {
-		/* display: none; */
-		align-self: flex-end;
-		margin-right: 0.2em;
-		margin-bottom: 0.2em;
-	}
 
 	&.fade-in {
 		opacity: 0.9;
@@ -259,24 +202,58 @@ button:active {
 	}
 }
 
-#lyrics-box {
-	overflow-y: auto;
-	background-color: var(--trans-white);
-	border-block: solid 0.5em var(--trans-white);
-	border-inline: solid 1px #00000000;
-	margin-block: 1em;
+.valentine-inner-container {
+	display: flex;
+	align-items: center;
+	border: solid 1px var(--black);
+	background-color: var(--white);
+	z-index: 1;
+	position: relative;
+	aspect-ratio: 5 / 7;
 }
 
-#lyrics-el {
-	color: var(--dark-plum);
-	font-weight: 540;
-	line-height: 1.55;
-	letter-spacing: normal;
-	backdrop-filter: blur(9px);
-	/* WATCH this ↓ */
-	min-height: 80px;
-	padding-inline: .8em;
-	padding-bottom: 2rem;
+#valentine-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(0.7);
+}
+
+p.valentine-words {
+	color: var(--light-plum);
+	font-weight: 900;
+	font-size: clamp(1.3rem, 4.1vw, 1.6rem);
+	text-align: center;
+	z-index: 2;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	width: 100%;
+	-webkit-text-stroke: 0.9px black;
+	text-shadow: 0 0 2px black;
+	line-height: 1.15;
+	text-transform: uppercase;
+	text-wrap: pretty;
+	padding: 0 0.2rem;
+	backdrop-filter: blur(0.75px);
+}
+
+p.valentine-words.top {
+	top: 0;
+	margin-top: 0.3rem;
+}
+
+p.valentine-words.bottom {
+	bottom: 0;
+	margin-bottom: 0.3rem;
+}
+
+p#note {
+	display: none;
+	font-size: 0.85em;
+	text-align: center;
+	color: var(--trans-white);
+	margin-block: 1rem;
 }
 
 /* ================================================= */
@@ -284,58 +261,23 @@ button:active {
 /* ================================================= */
 
 @media (max-width: 500px) {
-	html {
-		overflow: scroll;
-	}
-
 	.rocker-boys {
 		background-position: right;
 	}
 
-	.color-band {
-		> * {
-			/* text-align: left; */
-		}
-
-		h1 {
-			font-size: clamp(1rem, 0.051rem + 5.6vw, 2.2rem);
-			letter-spacing: 0.04em;
-		}
-
-		.subheading {
-			font-size: clamp(0.67rem, 0.15rem + 2.8vw, 1.75rem);
-			margin-top: 0.5em;
-			/* margin-left: 0; */
-		}
+	h1 {
+		font-size: clamp(1rem, 0.051rem + 5.6vw, 2.2rem);
+		letter-spacing: 0.04em;
 	}
 
-	.word-count-input-container {
-		#input-box {
-			justify-content: space-between;
-		}
-
-		button {
-			width: 100%;
-			margin-top: var(--top-margin);
-			margin-left: unset;
-		}
+	.subheading {
+		font-size: clamp(0.67rem, 0.15rem + 2.7vw, 1.55rem);
+		margin-top: 0.5em;
 	}
 
-	#lyrics-box {
-		scrollbar-width: none;
-		/* Firefox */
-		-ms-overflow-style: none;
-		/* IE and Edge */
-	}
-
-	#lyrics-box::-webkit-scrollbar {
-		/* Chrome */
-		width: 0;
-		background: transparent;
-	}
-
-	#lyrics-el {
-		font-size: 1.025rem;
+	button {
+		width: 100%;
+		margin-left: unset;
 	}
 }
 
