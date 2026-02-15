@@ -170,8 +170,43 @@ export const quotes = [
 		artist: `Morrissey`
 	},
 	{
-		lineOne: `<span style="font-size: 0.75em;line-height: 1;">I never wanted to kill, I am not naturally evil!</span>`,
-		lineTwo: `<span style="font-size: 0.75em";line-height: 1;>Such things I do, Just to make myself more attractive to you,<br>Have I failed?</span`,
+		lineOne: `<span style="font-size: 0.85em;">I never wanted to kill, I am not naturally evil!</span>`,
+		lineTwo: `<span style="font-size: 0.85em";>Such things I do, Just to make myself more attractive to you,<br><em>Have I failed?</em></span`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `I know what hands are for, and I'd like to help myself,`,
+		lineTwo: `You handsome devil!`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `Please, Valentine,`,
+		lineTwo: `Let me get my hands on your mammary glands`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `I crack the whip and you skip`,
+		lineTwo: `But you deserve it,<br>you deserve it, deserve it, deserve it`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `And when we're in your scholarly room,`,
+		lineTwo: `who will swallow whom?`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `<span style="font-size:0.85em;">There's more to life than books, you know (but not much more)</span>`,
+		lineTwo: `<span style="font-size:1.3em;">Oh, you handsome devil!</span>`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `I want the one I can't have`,
+		lineTwo: `And it's driving me mad!`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `<span style="font-size:0.9em;">On the day when your mentality catches up with your biology,`,
+		lineTwo: `<span style="font-size:1.2em;">Come 'round!</span>"`,
 		artist: `The Smiths`
 	},
 ]

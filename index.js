@@ -28,7 +28,7 @@ function getRandomQuote() {
 }
 
 function getRandomImage() {
-	let number = Math.floor(Math.random(0, 7) * 7)
+	let number = Math.floor(Math.random(0, 9) * 9)
 	return `images/all/image${number}.jpg`
 }
 

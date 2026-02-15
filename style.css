@@ -3,12 +3,13 @@
 	--white: #fbfbfb;
 	--trans-white: #fbfbfb75;
 	--dark-gray: #2f2f2f;
-	--transp-plum: hsl(315, 17%, 46%, 0.65);
+	--transp-plum: hsl(315, 17%, 41%, 0.75);
 	--light-plum: hsl(315, 29%, 71%);
 	--medium-plum: hsl(315, 36%, 47%);
 	--dark-plum: hsl(315, 51%, 20%);
 	--small-text: clamp(0.8rem, 0.2rem + 3.265vw, 1.05rem);
-	--inline-padding-margins: clamp(0.7em, 0.4em + 1.9vw, 3.5em);
+	/* --inline-padding-margins: clamp(0.7em, 0.4em + 1.9vw, 3.5em); */
+	--inline-padding-margins: clamp(0.7em, 0.34em + 1.9vw, 3.5em);
 	--black-text-shadow:
 		0.35px 0.35px .25px var(--black),
 		0.35px -0.35px .25px var(--black),
@@ -29,7 +30,12 @@ body {
 	color: var(--white);
 }
 
-body, h1, p, .subheading, main, footer {
+body,
+h1,
+p,
+.subheading,
+main,
+footer {
 	margin: 0 auto;
 	text-wrap: balance;
 }
@@ -69,22 +75,12 @@ main {
 	position: relative;
 }
 
-/*
-.color-band {
-	margin-block: clamp(0.5rem, -0.2vh + 1.9vh, 2.5vh) 0;
-	padding-block: clamp(0.6rem, -0.4vh + 4.2vh, 2.1vh);
-	padding-inline: var(--inline-padding-margins);
-	backdrop-filter: blur(2px);
-}
-*/
-
 .color-band {
 	background-color: var(--transp-plum);
 	display: flex;
 	flex-direction: column;
 	margin-block: clamp(0.5rem, -0.2vh + 1.9vh, 2.5vh) 0;
 	padding-block: clamp(0.6rem, -0.4vh + 4.2vh, 2.1vh);
-
 	padding-inline: var(--inline-padding-margins);
 	backdrop-filter: blur(2px);
 
@@ -95,7 +91,8 @@ main {
 	}
 
 	h1 {
-		font-size: clamp(0.7rem, 5.85vw, 3.5rem);
+		/* font-size: clamp(0.7rem, 5.85vw, 3.5rem); */
+		font-size: clamp(0.7rem, 6.3vw, 3.5rem);
 		font-weight: 750;
 		word-spacing: 0.08em;
 		line-height: 1.22;
@@ -172,7 +169,7 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: end;
+	/* justify-content: end; */
 }
 
 #input-box {
@@ -186,8 +183,8 @@ button {
 	background-color: var(--transp-plum);
 	color: var(--white);
 	font-family: "Open Sans", sans-serif;
-	font-size: calc(0.9 * var(--small-text));
-	font-weight: 550;
+	font-size: var(--small-text);
+	font-weight: 530;
 	word-spacing: 1px;
 	text-wrap: nowrap;
 	text-shadow: 0 0 1px black;
@@ -195,7 +192,7 @@ button {
 	border-radius: 11px;
 	box-shadow: 3px 3px 1px hsl(315, 25%, 30%, .6);
 	height: 40px;
-	padding-inline: 1em;
+	padding-inline: 1.7em;
 }
 
 @media (hover: hover) {
@@ -249,6 +246,7 @@ button:active {
 p.valentine-words {
 	color: var(--light-plum);
 	font-weight: 900;
+	/* TODO */
 	font-size: clamp(0.9rem, -0.2rem + 7.5vw, 1.7rem);
 	text-align: center;
 	z-index: 2;
@@ -261,7 +259,7 @@ p.valentine-words {
 	line-height: 1.17;
 	text-transform: uppercase;
 	padding: 0 0.32rem;
-	backdrop-filter: blur(0.75px);
+	backdrop-filter: blur(1px);
 }
 
 p.valentine-words.top {
@@ -292,14 +290,17 @@ p#note {
 		background-position: right;
 	}
 
-	h1 {
-		font-size: clamp(1rem, 0.051rem + 5.6vw, 2.2rem);
-		letter-spacing: 0.04em;
-	}
+	.color-band {
+		h1 {
+			/* font-size: clamp(1rem, 6.2vw, 2.2rem); */
+			font-size: clamp(1rem, -0.13rem + 6.5vw, 2.2rem);
+			letter-spacing: 0.02em;
+		}
 
-	.subheading {
-		font-size: clamp(0.6rem, 0.15rem + 2.7vw, 1.55rem);
-		margin-top: 0.5em;
+		.subheading {
+			font-size: clamp(0.6rem, 0.15rem + 2.7vw, 1.55rem);
+			margin-top: .35em;
+		}
 	}
 
 	button {
@@ -318,10 +319,6 @@ p#note {
 }
 
 @media(height < 600px) {
-	html, body {
-		height: unset !important;
-	}
-
 	.color-band {
 		margin-block: .5em 0;
 		padding-block: .5em;
