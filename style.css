@@ -4,7 +4,7 @@
 	--trans-white: #fbfbfb75;
 	--dark-gray: #2f2f2f;
 	--transp-plum: hsl(315, 17%, 46%, 0.65);
-	--light-plum: hsl(315, 29%, 65%);
+	--light-plum: hsl(315, 29%, 71%);
 	--medium-plum: hsl(315, 36%, 47%);
 	--dark-plum: hsl(315, 51%, 20%);
 	--small-text: clamp(0.8rem, 0.2rem + 3.265vw, 1.05rem);
@@ -31,6 +31,7 @@ body {
 
 body, h1, p, .subheading, main, footer {
 	margin: 0 auto;
+	text-wrap: balance;
 }
 
 main {
@@ -241,13 +242,13 @@ button:active {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	filter: brightness(0.7);
+	filter: brightness(0.55);
 }
 
 p.valentine-words {
 	color: var(--light-plum);
 	font-weight: 900;
-	font-size: clamp(1.3rem, 4.1vw, 1.6rem);
+	font-size: clamp(1.3rem, 6.6vw, 1.8rem);
 	text-align: center;
 	z-index: 2;
 	position: absolute;
@@ -256,21 +257,20 @@ p.valentine-words {
 	width: 100%;
 	-webkit-text-stroke: 0.9px black;
 	text-shadow: 0 0 2px black;
-	line-height: 1.15;
+	line-height: 1.19;
 	text-transform: uppercase;
-	text-wrap: pretty;
 	padding: 0 0.2rem;
 	backdrop-filter: blur(0.75px);
 }
 
 p.valentine-words.top {
 	top: 0;
-	margin-top: 0.3rem;
+	margin-top: 0.38rem;
 }
 
 p.valentine-words.bottom {
 	bottom: 0;
-	margin-bottom: 0.3rem;
+	margin-bottom: 0.38rem;
 }
 
 p#note {
