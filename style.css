@@ -33,8 +33,17 @@ body, h1, p, .subheading, main, footer {
 	margin: 0 auto;
 }
 
-main, footer {
+main {
 	width: min(100%, 975px);
+	-ms-overflow-style: none;
+	/* Internet Explorer 10+ */
+	scrollbar-width: none;
+
+	/* Firefox, Safari 18.2+, Chromium 121+ */
+	&::-webkit-scrollbar {
+		display: none;
+		/* Older Safari and Chromium */
+	}
 }
 
 .bodoni-moda-sc {
@@ -59,12 +68,22 @@ main, footer {
 	position: relative;
 }
 
+/*
+.color-band {
+	margin-block: clamp(0.5rem, -0.2vh + 1.9vh, 2.5vh) 0;
+	padding-block: clamp(0.6rem, -0.4vh + 4.2vh, 2.1vh);
+	padding-inline: var(--inline-padding-margins);
+	backdrop-filter: blur(2px);
+}
+*/
+
 .color-band {
 	background-color: var(--transp-plum);
 	display: flex;
 	flex-direction: column;
-	margin-block: clamp(0.5rem, 1vh, 2vh) 0;
-	padding-block: clamp(0.6rem, -0.4vh + 2.3vh, 2vh);
+	margin-block: clamp(0.5rem, -0.2vh + 1.9vh, 2.5vh) 0;
+	padding-block: clamp(0.6rem, -0.4vh + 4.2vh, 2.1vh);
+
 	padding-inline: var(--inline-padding-margins);
 	backdrop-filter: blur(2px);
 
@@ -89,6 +108,7 @@ main, footer {
 	.subheading {
 		font-size: clamp(0.7rem, 0.2rem + 2.4vw, 1.5rem);
 		font-weight: 350;
+		letter-spacing: 0.012em;
 		word-spacing: 1.5px;
 		padding-left: .25em;
 		margin-top: .125em;
@@ -102,17 +122,23 @@ main {
 	overflow-y: auto;
 	padding-inline: calc(1.2 * var(--inline-padding-margins));
 	justify-content: space-between;
-	/* justify-content: start; */
-	/* justify-self: self-start; */
+}
+
+main > div.inner-main-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	margin-top: 1rem;
 }
 
 footer {
 	--white: #fbfbfbb8;
 	margin-block: 2.2vh 1.7vh;
+	width: 100%;
 
 	.footer-text-div {
 		width: min(78%, 800px);
-		margin: 0.6em auto 0 auto;
+		margin: 0.9em auto 0 auto;
 	}
 
 	p {
@@ -141,11 +167,10 @@ footer {
 	}
 }
 
-.word-count-input-container {
+.pointless-button-container {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	margin-top: clamp(0.5em, -0.4em + 2.5vh, 1.3em);
 	justify-content: end;
 }
 
@@ -186,11 +211,11 @@ button:active {
 }
 
 #valentine-container {
-	margin-block: 1.5rem;
+	margin-block: 0.5rem;
 	border: black 0.5px solid;
 	padding: 20px;
 	background-color: white;
-	width: clamp(300px, 54vw, 350px);
+	width: min(100%, 380px);
 	margin-inline: auto;
 	display: none;
 	opacity: 0;
@@ -253,7 +278,8 @@ p#note {
 	font-size: 0.85em;
 	text-align: center;
 	color: var(--trans-white);
-	margin-block: 1rem;
+	margin-inline: auto;
+	margin-block: 1.5rem 0.9rem;
 }
 
 /* ================================================= */
@@ -278,6 +304,10 @@ p#note {
 	button {
 		width: 100%;
 		margin-left: unset;
+	}
+
+	p#note {
+		font-size: 0.75em;
 	}
 }
 

@@ -19,7 +19,7 @@ function generateValentine() {
 	valentineContainer.innerHTML = valContents
 	valentineContainer.style.display = 'unset';
 	valentineContainer.classList.add('fade-in')
-	document.getElementById('note').style.display = 'unset'
+	document.getElementById('note').style.display = 'block'
 }
 
 function getRandomQuote() {
