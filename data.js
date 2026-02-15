@@ -1,7 +1,7 @@
 export const quotes = [
 	{
 		lineOne: `It's not like any other love`,
-		lineTwo: `This one is different, because it's us`,
+		lineTwo: `This one is different, because it's ours`,
 		artist: `The Smiths`
 	},
 	{
@@ -15,7 +15,7 @@ export const quotes = [
 		artist: `The Smiths`
 	},
 	{
-		lineOne: `I am writing this to say,<br>In a gentle way`,
+		lineOne: `I am writing this to say,<br>In a gentle way,`,
 		lineTwo: `<em>Thank you,<br> but no.</em>`,
 		artist: `Morrissey`
 	},
@@ -26,7 +26,7 @@ export const quotes = [
 	},
 	{
 		lineOne: `Heavy words are so lightly thrown,`,
-		lineTwo: `But still I'd leap in front of a flying bullet for you.`,
+		lineTwo: `but still I'd leap in front of a flying bullet for you.`,
 		artist: `The Smiths`
 	},
 	{
@@ -41,7 +41,7 @@ export const quotes = [
 	},
 	{
 		lineOne: `I dreamt about you last night,`,
-		lineTwo: `And I fell out of bed twice.`,
+		lineTwo: `and I fell out of bed twice.`,
 		artist: `The Smiths`
 	},
 	{
@@ -50,7 +50,7 @@ export const quotes = [
 		artist: `The Smiths`
 	},
 	{
-		lineOne: `<span style="font-size: 1.25em">Valentine,</span>`,
+		lineOne: `<span style="font-size: 1.275em">Valentine,</span>`,
 		lineTwo: `You can pin and mount me like a butterfly!`,
 		artist: `The Smiths`
 	},
@@ -60,8 +60,8 @@ export const quotes = [
 		artist: `The Smiths`
 	},
 	{
-		lineOne: `I know I'm unloveable.`,
-		lineTwo: `You don't have to tell me.`,
+		lineOne: `I know I'm unloveable...`,
+		lineTwo: `you don't have to tell me.`,
 		artist: ``
 	},
 	{
@@ -85,7 +85,7 @@ export const quotes = [
 		artist: `Morrissey`
 	},
 	{
-		lineOne: `Love is natural and real,`,
+		lineOne: `Love is natural and real`,
 		lineTwo: `But not for you and I, my love.`,
 		artist: `The Smiths`
 	},
@@ -96,7 +96,7 @@ export const quotes = [
 	},
 	{
 		lineOne: `Time's tide will smother you`,
-		lineTwo: `And I will too, Valentine!`,
+		lineTwo: `and I will too, Valentine!`,
 		artist: `The Smiths`
 	},
 	{
@@ -107,6 +107,61 @@ export const quotes = [
 	{
 		lineOne: `Please help the cause`,
 		lineTwo: `against loneliness!`,
+		artist: `Morrissey`
+	},
+	{
+		lineOne: `The Morrissey you,`,
+		lineTwo: `The Marr I like you!`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `The more you ignore me,`,
+		lineTwo: `The closer I get.`,
+		artist: `Morrissey`
+	},
+	{
+		lineOne: `Crash into my arms`,
+		lineTwo: `I want you, Valentine.`,
+		artist: `Morrissey`
+	},
+	{
+		lineOne: `And if it's the last thing I ever do`,
+		lineTwo: `I'm gonna get you.`,
+		artist: `Morrissey`
+	},
+	{
+		lineOne: `If you ever need self validation,`,
+		lineTwo: `Just meet me in the alley by the railway station`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `Why do you come here`,
+		lineTwo: `When you know it makes thing hard for me?`,
+		artist: `Morrissey`
+	},
+	{
+		lineOne: `Where are you,`,
+		lineTwo: `My pashernate love?`,
+		artist: `Morrissey`
+	},
+	{
+		lineOne: `Let's hold fast to the dream`,
+		lineTwo: `That tastes and sparkles like wine`,
+		artist: `Morrissey`
+	},
+	{
+		lineOne: `What seems like an interlude now`,
+		lineTwo: `Could be the beginning of love`,
+		artist: `Morrissey`
+	},
+	{
+		lineOne: `I know you love one person, so`,
+		lineTwo: `why don't you love two?`,
+		artist: `Morrissey`
+	},
+	{
+		lineOne: `Loot wine, be mine, and then`,
+		lineTwo: `let's stay out for the night, Valentine!`,
 		artist: `Morrissey`
 	},
 ]

@@ -189,7 +189,8 @@ button {
 	font-size: calc(0.9 * var(--small-text));
 	font-weight: 550;
 	word-spacing: 1px;
-	text-shadow: 0.5px 0.5px 1px var(--dark-plum);
+	text-wrap: nowrap;
+	text-shadow: 0 0 1px black;
 	border: 1px solid var(--medium-plum);
 	border-radius: 11px;
 	box-shadow: 3px 3px 1px hsl(315, 25%, 30%, .6);
@@ -304,6 +305,11 @@ p#note {
 	button {
 		width: 100%;
 		margin-left: unset;
+	}
+
+	p.valentine-words {
+		text-shadow: 0 0 3px black;
+
 	}
 
 	p#note {
