@@ -170,6 +170,7 @@ footer {
 	flex-wrap: wrap;
 	align-items: center;
 	/* justify-content: end; */
+	padding-inline: var(--inline-padding-margins); }
 }
 
 #input-box {
