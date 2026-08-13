@@ -2,12 +2,14 @@ export const quotes = [
 	{
 		lineOne: `It's not like any other love`,
 		lineTwo: `This one is different, because it's ours`,
-		artist: `The Smiths`
+		artist: `The Smiths`,
+		songTitle: `Hand in Glove`
 	},
 	{
 		lineOne: `The good life is out there somewhere`,
 		lineTwo: `So stay on my arm, you little charmer`,
-		artist: `The Smiths`
+		artist: `The Smiths`,
+		songTitle: `Hand in Glove`
 	},
 	{
 		lineOne: `I'd like to drop my trousers to the world`,
@@ -50,7 +52,7 @@ export const quotes = [
 		artist: `The Smiths`
 	},
 	{
-		lineOne: `<span style="font-size: 1.32em">Valentine,</span>`,
+		lineOne: `<span style="font-size: 1.3em">Valentine,</span>`,
 		lineTwo: `You can pin and mount me like a butterfly!`,
 		artist: `The Smiths`
 	},
@@ -170,8 +172,8 @@ export const quotes = [
 		artist: `Morrissey`
 	},
 	{
-		lineOne: `<span style="font-size: 0.85em;">I never wanted to kill, I am not naturally evil!</span>`,
-		lineTwo: `<span style="font-size: 0.85em";>Such things I do, Just to make myself more attractive to you,<br><em>Have I failed?</em></span`,
+		lineOne: `<span style="font-size: 0.8em;">I never wanted to kill, I am not naturally evil!</span>`,
+		lineTwo: `<span style="font-size: 0.8em";>Such things I do, Just to make myself more attractive to you,<br><em>Have I failed?</em></span`,
 		artist: `The Smiths`
 	},
 	{
@@ -186,7 +188,7 @@ export const quotes = [
 	},
 	{
 		lineOne: `I crack the whip and you skip`,
-		lineTwo: `But you deserve it,<br>you deserve it, deserve it, deserve it`,
+		lineTwo: `But you deserve it, Valentine!`,
 		artist: `The Smiths`
 	},
 	{
@@ -206,8 +208,29 @@ export const quotes = [
 	},
 	{
 		lineOne: `<span style="font-size:0.9em;">On the day when your mentality catches up with your biology,`,
-		lineTwo: `<span style="font-size:1.2em;">Come 'round!</span>"`,
+		lineTwo: `<span style="font-size:1.2em;">Come 'round!</span>`,
 		artist: `The Smiths`
+	},
+	{
+		lineOne: `Do you love me like you used to,`,
+		lineTwo: `Valentine?`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `The hills were alive with celibate cries`,
+		lineTwo: `Until you came along.`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `We may be hidden by rags`,
+		lineTwo: `But we've something they'll never have.`,
+		artist: `The Smiths`
+	},
+	{
+		lineOne: `When you cycled by`,
+		lineTwo: `Here began all my dreams.`,
+		artist: `The Smiths`,
+		songTitle: `Back to the Old House`
 	},
 ]
 
@@ -215,6 +238,7 @@ export const quotes = [
 {
 	lineOne: ``,
 	lineTwo: ``,
-	artist: `The Smiths`
+	artist: `The Smiths`,
+	songTitle: ``
 },
 */

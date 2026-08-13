@@ -128,23 +128,7 @@ main > div.inner-main-wrapper {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5em;
-	margin-top: 1rem;
-}
-
-.pointless-button-container {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	/* justify-content: end; */
-	padding-inline: var(--inline-padding-margins);
-}
-
-#input-box {
-	display: flex;
-	gap: 0.7em;
-	flex: 1 1 auto;
-	align-items: center;
-}
+} */
 
 button {
 	background-color: var(--transp-plum);
@@ -244,15 +228,6 @@ footer {
 	margin-block: 2.2vh 1.7vh;
 	width: 100%;
 
-	p.note {
-		display: none;
-		font-size: 0.85em;
-		text-align: center;
-		color: var(--trans-white);
-		margin-inline: auto;
-		margin-block: 1rem 1.2rem;
-	}
-
 	.footer-text-div {
 		width: min(90%, 800px);
 		margin: 0.9em auto 0 auto;
@@ -324,10 +299,6 @@ footer {
 	p.valentine-words {
 		text-shadow: 0 0 3px black;
 
-	}
-
-	footer p.note {
-		font-size: 0.75em;
 	}
 }
 
