@@ -46,8 +46,6 @@ footer {
 main {
 	width: min(100%, 975px);
 	-ms-overflow-style: none;
-	/* Internet Explorer 10+ */
-	scrollbar-width: none;
 
 	/* Firefox, Safari 18.2+, Chromium 121+ */
 	&::-webkit-scrollbar {
@@ -75,7 +73,7 @@ main {
 	position: relative;
 }
 
-.color-band {
+header {
 	background-color: var(--transp-plum);
 	display: flex;
 	flex-direction: column;
@@ -91,7 +89,6 @@ main {
 	}
 
 	h1 {
-		/* font-size: clamp(0.7rem, 5.85vw, 3.5rem); */
 		font-size: clamp(0.7rem, 6.3vw, 3.5rem);
 		font-weight: 750;
 		word-spacing: 0.08em;
@@ -142,6 +139,7 @@ button {
 	padding-inline: 1.7em;
 	margin-top: 1rem;
 	width: fit-content;
+	/* TODO: Nothing should be scrolling, but esp not button. */
 }
 
 @media (hover: hover) {
@@ -276,7 +274,7 @@ footer {
 		background-position: right;
 	}
 
-	.color-band {
+	header {
 		h1 {
 			font-size: clamp(1.2rem, 0.1rem + 6.3vw, 1.8rem);
 			letter-spacing: 0.02em;
@@ -302,7 +300,7 @@ footer {
 }
 
 @media(height < 600px) {
-	.color-band {
+	header {
 		margin-block: .5em 0;
 		padding-block: .5em;
 
