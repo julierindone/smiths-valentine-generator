@@ -68,13 +68,11 @@ main {
 	/* letter-spacing: .012em; */
 }
 
-.rocker-boys {
+.fair-girls {
 	flex-direction: column;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("images/rockers.jpg");
 	height: 100dvh;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+		url("images/fair-girls.png") 20% / cover no-repeat;
 	position: relative;
 }
 
@@ -128,7 +126,7 @@ main > div.inner-main-wrapper {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5em;
-} */
+}
 
 button {
 	background-color: var(--transp-plum);
@@ -144,6 +142,7 @@ button {
 	box-shadow: 3px 3px 1px hsl(315, 25%, 30%, .6);
 	height: 40px;
 	padding-inline: 1.7em;
+	margin-top: 1rem;
 }
 
 @media (hover: hover) {
@@ -274,7 +273,7 @@ footer {
 /* ================================================= */
 
 @media (max-width: 500px) {
-	.rocker-boys {
+	.fair-girls {
 		background-position: right;
 	}
 
