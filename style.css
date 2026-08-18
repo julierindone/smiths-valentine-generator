@@ -61,11 +61,10 @@ main {
 	font-optical-sizing: auto;
 }
 
-.open-sans-smiths {
-	font-family: "Open Sans", sans-serif;
+.noto-sans {
+	font-family: "Noto Sans", sans-serif;
 	font-optical-sizing: auto;
 	font-variation-settings: "wdth" 100;
-	/* letter-spacing: .012em; */
 }
 
 .fair-girls {
@@ -105,8 +104,8 @@ main {
 
 	.subheading {
 		font-size: clamp(0.7rem, 0.2rem + 2.4vw, 1.5rem);
-		font-weight: 350;
-		letter-spacing: 0.012em;
+		font-weight: 300;
+		letter-spacing: 0.03em;
 		word-spacing: 1.5px;
 		padding-left: .25em;
 		margin-top: .125em;
@@ -131,9 +130,8 @@ main > div.inner-main-wrapper {
 button {
 	background-color: var(--transp-plum);
 	color: var(--white);
-	font-family: "Open Sans", sans-serif;
 	font-size: var(--small-text);
-	font-weight: 530;
+	font-weight: 400;
 	word-spacing: 1px;
 	text-wrap: nowrap;
 	text-shadow: 0 0 1px black;
@@ -204,8 +202,8 @@ p.valentine-words {
 	left: 50%;
 	transform: translate(-50%);
 	width: 100%;
-	-webkit-text-stroke: 0.9px black;
-	text-shadow: 0 0 2px black;
+	text-shadow: 0 0 5px black;
+	letter-spacing: -0.3;
 	line-height: 1.17;
 	text-transform: uppercase;
 	padding: 0 0.32rem;
@@ -279,9 +277,10 @@ footer {
 
 	.color-band {
 		h1 {
-			/* font-size: clamp(1rem, 6.2vw, 2.2rem); */
-			font-size: clamp(1rem, -0.13rem + 6.5vw, 2.2rem);
+			font-size: clamp(1.2rem, 0.1rem + 6.3vw, 1.8rem);
 			letter-spacing: 0.02em;
+			/* not sure about this stroke-width.... i thought i'd gotten rid of it; */
+			-webkit-text-stroke-width: 0.12px;
 		}
 
 		.subheading {
