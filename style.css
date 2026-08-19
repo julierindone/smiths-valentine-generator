@@ -1,16 +1,13 @@
-/* TODO: Flip media queries to mobile-first */
-/* TODO: Clean up entire file */
-
 :root {
 	--black: #101010;
 	--white: #fbfbfb;
 	--trans-white: #fbfbfb75;
 	--dark-gray: #2f2f2f;
-	--transp-plum: hsl(315, 17%, 41%, 0.75);
-	--light-plum: hsl(315, 29%, 71%);
-	--medium-plum: hsl(315, 36%, 47%);
-	--dark-plum: hsl(315, 51%, 20%);
-	--small-text: clamp(0.8rem, 0.2rem + 3.265vw, 1.05rem);
+	--transp-plum: hsl(315 17% 41% / 75%);
+	--light-plum: hsl(315 29% 71%);
+	--medium-plum: hsl(300 29% 40%);
+	--dark-plum: hsl(315 51% 20%);
+	--small-text: clamp(0.9rem, 0.25rem + 3.265vw, 1.1rem);
 	--inline-padding-margins: clamp(0.7em, 0.34em + 1.9vw, 3.5em);
 	--black-text-shadow:
 		0.35px 0.35px .25px var(--black),
@@ -19,40 +16,89 @@
 		-0.35px -0.35px .25px var(--black);
 }
 
-/* Base sizing: (min-width:626px) and (max-width:1250px) */
-html {
-	height: 100dvh;
+* {
+	box-sizing: border-box;
 }
 
-body {
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
-	background-color: var(--dark-gray);
-	color: var(--white);
-}
-
+html,
 body,
+header,
+main,
+footer,
 h1,
 p,
-a,
-.subheading,
-main,
-footer {
+a {
+	text-align: center;
 	margin: 0 auto;
 	text-wrap: balance;
 }
 
-main {
-	width: min(100%, 975px);
-	-ms-overflow-style: none;
+/* ================================================= */
+/* ===================== LAYOUT ==================== */
+/* ================================================= */
 
-	/* Firefox, Safari 18.2+, Chromium 121+ */
-	&::-webkit-scrollbar {
-		display: none;
-		/* Older Safari and Chromium */
+body {
+	background-color: var(--dark-gray);
+	color: var(--white);
+	display: grid;
+	gap: 1.8em;
+	height: 100dvh;
+	grid-template-rows: auto 1fr auto;
+	padding-block: clamp(0.5rem, -0.2vh + 1.9vh, 2.5vh);
+}
+
+body::before {
+	content: "";
+	background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+		url("images/fair-girls.png") 25% / cover no-repeat;
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+}
+
+header {
+	background-color: var(--transp-plum);
+	width: 100%;
+	padding-block: clamp(0.5rem, -0.2vh + 1.9vh, 2.5vh);
+	padding-inline: 2vw;
+	backdrop-filter: blur(2px);
+}
+
+main, footer {
+	padding-inline: 4vw;
+}
+
+main {
+	display: flex;
+	gap: 2vh;
+	flex-direction: column;
+	align-items: center;
+	min-height: 0;
+}
+
+footer {
+	--white: #fbfbfbb8;
+	width: 100%;
+
+	hr {
+		border: none;
+		border-top: 1px solid var(--white);
+		margin-block: 0;
+	}
+
+	.footer-top-line {
+		width: 98%;
+	}
+
+	.footer-bottom-line {
+		margin-top: 0.3em;
+		width: 92%;
 	}
 }
+
+/* ================================================= */
+/* ================== Typography =================== */
+/* ================================================= */
 
 .bodoni-moda-sc {
 	font-family: "Bodoni Moda SC", serif;
@@ -65,88 +111,73 @@ main {
 	font-variation-settings: "wdth" 100;
 }
 
-.fair-girls {
-	flex-direction: column;
-	height: 100dvh;
-	background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-		url("images/fair-girls.png") 20% / cover no-repeat;
-	position: relative;
+h1 {
+	font-size: clamp(1.3rem, 0.3rem + 7.6vw, 2.3rem);
+	font-weight: 750;
+	letter-spacing: 0.04em;
+	word-spacing: 0.08em;
+	line-height: 1.22;
+	text-transform: uppercase;
+	-webkit-text-stroke-color: var(--white);
+	-webkit-text-stroke-width: 0.12px;
 }
 
-header {
-	background-color: var(--transp-plum);
-	display: flex;
-	flex-direction: column;
-	margin-block: clamp(0.5rem, -0.2vh + 1.9vh, 2.5vh) 0;
-	padding-block: clamp(0.6rem, -0.4vh + 4.2vh, 2.1vh);
-	padding-inline: var(--inline-padding-margins);
-	backdrop-filter: blur(2px);
+.subheading {
+	font-size: clamp(0.6rem, 0.15rem + 2.7vw, 1.55rem);
+	font-weight: 300;
+	letter-spacing: 0.03em;
+	margin-top: .35em;
+}
 
-	> * {
-		max-width: 1010px;
+footer {
+
+	p,
+	a:link,
+	a:visited {
+		font-size: calc(.86 * var(--small-text));
+		color: var(--white);
+		font-weight: 350;
 		text-align: center;
-		text-transform: uppercase;
+		line-height: 1.3;
+		backdrop-filter: blur(2px);
+		text-shadow: 1px 1px 1px black;
+		width: fit-content;
+		margin-top: 0.8em;
 	}
 
-	h1 {
-		font-size: clamp(0.7rem, 6.3vw, 3.5rem);
-		font-weight: 750;
-		word-spacing: 0.08em;
-		line-height: 1.22;
-		-webkit-text-stroke-width: .5px;
-		-webkit-text-stroke-color: var(--white);
-		max-width: 1000px;
-		text-shadow: var(--black-text-shadow);
-	}
-
-	.subheading {
-		font-size: clamp(0.7rem, 0.2rem + 2.4vw, 1.5rem);
-		font-weight: 300;
-		letter-spacing: 0.03em;
-		word-spacing: 1.5px;
-		padding-left: .25em;
-		margin-top: .125em;
+	a:link,
+	a:visited {
+		color: var(--light-plum);
+		display: block;
+		text-decoration-line: none;
+		margin-top: .25em;
 	}
 }
 
-main {
-	display: flex;
-	flex-direction: column;
-	flex: auto;
-	overflow-y: auto;
-	padding-inline: calc(1.2 * var(--inline-padding-margins));
-	justify-content: space-between;
-}
-
-main > div.inner-main-wrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 1.5em;
-}
+/* ================================================= */
+/* =============== IMAGES & BUTTONS ================ */
+/* ================================================= */
 
 button {
 	background-color: var(--transp-plum);
 	color: var(--white);
 	font-size: var(--small-text);
-	font-weight: 400;
+	font-weight: 350;
 	word-spacing: 1px;
 	text-wrap: nowrap;
 	text-shadow: 0 0 1px black;
 	border: 1px solid var(--medium-plum);
-	border-radius: 11px;
-	box-shadow: 3px 3px 1px hsl(315, 25%, 30%, .6);
-	height: 40px;
-	padding-inline: 1.7em;
-	margin-top: 1rem;
-	width: fit-content;
-	/* TODO: Nothing should be scrolling, but esp not button. */
+	border-radius: 9px;
+	box-shadow: 3px 3px 1px hsl(315 25% 30% / 60%);
+	height: 44px;
+	padding-inline: 2.2em;
+	width: 100%;
 }
 
 @media (hover: hover) {
 	button:hover {
 		background-color: hsla(315, 16%, 40%, 0.75);
 		box-shadow: 3px 3px hsla(315, 26%, 30%, 0.75);
-		/* transition: .1s ease-in-out, box-shadow 1.1s ease-in-out; */
 	}
 }
 
@@ -157,43 +188,34 @@ button:active {
 }
 
 #valentine-container {
-	margin-block: 0.5rem;
-	border: black 0.5px solid;
-	padding: 15px;
-	background-color: white;
-	width: min(96%, 365px);
-	margin-inline: auto;
-	display: none;
-	opacity: 0;
-	transition: opacity .25s 0s ease-out;
-
-	&.fade-in {
-		opacity: 0.9;
-		transition: opacity .3s 0s ease-in;
-	}
+	display: flex;
+	overflow: hidden;
+	min-height: 0;
+	background-color: var(--white);
+	padding: .76em .6em;
+	border: var(--black) 2px solid;
+	width: fit-content;
 }
 
-.valentine-inner-container {
+#inner-valentine-container {
 	display: flex;
-	align-items: center;
-	border: solid 1px var(--black);
 	background-color: var(--white);
-	z-index: 1;
-	position: relative;
-	aspect-ratio: 9 / 14;
+	padding: .125rem .125rem;
+	border: var(--black) 2.5px solid;
 }
 
 #valentine-image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	filter: brightness(0.55);
+	max-width: 100%;
+	max-height: 100%;
+	aspect-ratio: 10/14;
+	border: var(--black) 1.5px solid;
+	filter: brightness(0.65);
 }
 
+/*
 p.valentine-words {
 	color: var(--light-plum);
 	font-weight: 900;
-	/* TODO */
 	font-size: clamp(0.9rem, -0.2rem + 7.5vw, 1.7rem);
 	text-align: center;
 	z-index: 2;
@@ -218,84 +240,46 @@ p.valentine-words.bottom {
 	bottom: 0;
 	margin-bottom: 0.38rem;
 }
-
-footer {
-	--white: #fbfbfbb8;
-	margin-block: 2.2vh 1.7vh;
-	width: 100%;
-
-	.footer-text-div {
-		width: min(90%, 800px);
-		margin: 0.9em auto 0 auto;
-	}
-
-	p,
-	a:link,
-	a:visited {
-		font-size: calc(.86 * var(--small-text));
-		color: var(--white);
-		font-weight: 350;
-		text-align: center;
-		line-height: 1.3;
-		backdrop-filter: blur(5px);
-		width: fit-content;
-	}
-
-	a:link,
-	a:visited {
-		color: var(--light-plum);
-		display: block;
-		text-decoration-line: none;
-		margin-top: .45em;
-	}
-
-	hr {
-		border: none;
-		border-top: 1px solid var(--white);
-		margin-block: 0;
-	}
-
-	.footer-top-line {
-		width: 90%;
-	}
-
-	.footer-bottom-line {
-		margin-top: 0.4em;
-		width: 82%;
-	}
-}
+	*/
 
 /* ================================================= */
 /* ================= MEDIA QUERIES ================= */
 /* ================================================= */
 
-@media (max-width: 500px) {
-	.fair-girls {
-		background-position: right;
+@media (min-width: 500px) {
+	body::before {
+		background-position-y: 25%;
 	}
 
 	header {
-		h1 {
-			font-size: clamp(1.2rem, 0.1rem + 6.3vw, 1.8rem);
-			letter-spacing: 0.02em;
-			/* not sure about this stroke-width.... i thought i'd gotten rid of it; */
-			-webkit-text-stroke-width: 0.12px;
-		}
+		padding-inline: 3vw;
+	}
 
-		.subheading {
-			font-size: clamp(0.6rem, 0.15rem + 2.7vw, 1.55rem);
-			margin-top: .35em;
+	main {
+		button {
+			width: fit-content;
 		}
 	}
 
-	button {
-		width: 100%;
-		margin-left: unset;
+	footer {
+		.footer-top-line {
+			width: max(69%, 450px);
+		}
+
+		.footer-bottom-line {
+			margin-top: 0.6em;
+			width: max(62%, 420px);
+		}
 	}
 
-	p.valentine-words {
-		text-shadow: 0 0 3px black;
+	/* TYPOGRAPHY */
+	h1 {
+		font-size: clamp(2.5rem, 5.9vw, 3.8rem);
+	}
 
+	.subheading {
+		font-size: clamp(0.7rem, 0.2rem + 2.4vw, 1.5rem);
+		margin-top: .125em;
 	}
 }
 
