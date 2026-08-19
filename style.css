@@ -187,21 +187,25 @@ button:active {
 	transform: translateY(1px) translateX(1px) scale(98%);
 }
 
+/* TODO: Add fade in/out */
 #valentine-container {
-	display: flex;
+	display: none;
 	overflow: hidden;
 	min-height: 0;
 	background-color: var(--white);
 	padding: .76em .6em;
 	border: var(--black) 2px solid;
 	width: fit-content;
+	max-width: 420px;
 }
 
-#inner-valentine-container {
+.inner-valentine-container {
 	display: flex;
 	background-color: var(--white);
-	padding: .125rem .125rem;
+	padding: .195rem .195rem;
 	border: var(--black) 2.5px solid;
+	z-index: 1;
+	position: relative;
 }
 
 #valentine-image {
@@ -209,14 +213,13 @@ button:active {
 	max-height: 100%;
 	aspect-ratio: 10/14;
 	border: var(--black) 1.5px solid;
-	filter: brightness(0.65);
+	filter: brightness(0.55);
 }
 
-/*
 p.valentine-words {
+	font-size: clamp(0.9rem, -0.2rem + 7.5vw, 1.8rem);
 	color: var(--light-plum);
 	font-weight: 900;
-	font-size: clamp(0.9rem, -0.2rem + 7.5vw, 1.7rem);
 	text-align: center;
 	z-index: 2;
 	position: absolute;
@@ -224,7 +227,7 @@ p.valentine-words {
 	transform: translate(-50%);
 	width: 100%;
 	text-shadow: 0 0 5px black;
-	letter-spacing: -0.3;
+	letter-spacing: -0.3px;
 	line-height: 1.17;
 	text-transform: uppercase;
 	padding: 0 0.32rem;
@@ -233,20 +236,21 @@ p.valentine-words {
 
 p.valentine-words.top {
 	top: 0;
-	margin-top: 0.38rem;
+	margin-top: 0.45em;
 }
 
 p.valentine-words.bottom {
 	bottom: 0;
-	margin-bottom: 0.38rem;
+	margin-bottom: 0.45em;
 }
-	*/
 
 /* ================================================= */
 /* ================= MEDIA QUERIES ================= */
 /* ================================================= */
 
 @media (min-width: 500px) {
+
+	/* LAYOUT */
 	body::before {
 		background-position-y: 25%;
 	}
@@ -274,12 +278,17 @@ p.valentine-words.bottom {
 
 	/* TYPOGRAPHY */
 	h1 {
+		/* TODO: Put this in a container query */
 		font-size: clamp(2.5rem, 5.9vw, 3.8rem);
 	}
 
 	.subheading {
 		font-size: clamp(0.7rem, 0.2rem + 2.4vw, 1.5rem);
 		margin-top: .125em;
+	}
+
+	p.valentine-words {
+		letter-spacing: unset;
 	}
 }
 
@@ -294,6 +303,16 @@ p.valentine-words.bottom {
 
 		> .subheading {
 			font-size: 1.2rem;
+		}
+	}
+
+	main {
+		padding-inline: 30vw;
+	}
+
+	footer {
+		hr {
+			display: none;
 		}
 	}
 }

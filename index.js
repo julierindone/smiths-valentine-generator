@@ -17,7 +17,7 @@ function generateValentine() {
 	const valContents = getValentineHtml(quote)
 
 	valentineContainer.innerHTML = valContents
-	valentineContainer.style.display = 'unset';
+	valentineContainer.style.display = 'flex';
 	valentineContainer.classList.add('fade-in')
 }
 
@@ -33,10 +33,10 @@ function getRandomImage() {
 
 function getValentineHtml(quote) {
 	return `
-			<div class="valentine-inner-container">
-				<img id="valentine-image" src="${image}">
-				<p class="valentine-words top">${quote.lineOne}</p>
-				<p class="valentine-words bottom">${quote.lineTwo}</p>
-			</div>
+		<div class="inner-valentine-container">
+			<img id="valentine-image" src="${image}">
+			<p class="valentine-words top">${quote.lineOne}</p>
+			<p class="valentine-words bottom">${quote.lineTwo}</p>
+		</div>
 		`
 }
