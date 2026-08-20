@@ -3,11 +3,10 @@
 	--white: #fbfbfb;
 	--trans-white: #fbfbfb75;
 	--dark-gray: #2f2f2f;
-	--transp-plum: hsl(315 17% 41% / 75%);
 	--light-plum: hsl(315 29% 71%);
-	--medium-plum: hsl(300 29% 40%);
+	--medium-plum: hsl(300 25% 35%);
 	--dark-plum: hsl(315 51% 20%);
-	--small-text: clamp(0.9rem, 0.25rem + 3.265vw, 1.1rem);
+	--small-text: clamp(0.85rem, 0.35rem + 1.7vw, 1.1rem);
 	--inline-padding-margins: clamp(0.7em, 0.34em + 1.9vw, 3.5em);
 	--black-text-shadow:
 		0.35px 0.35px .25px var(--black),
@@ -41,7 +40,7 @@ body {
 	background-color: var(--dark-gray);
 	color: var(--white);
 	display: grid;
-	gap: 1.8em;
+	gap: 1.5em;
 	height: 100dvh;
 	grid-template-rows: auto 1fr auto;
 	padding-block: clamp(0.5rem, -0.2vh + 1.9vh, 2.5vh);
@@ -57,7 +56,7 @@ body::before {
 }
 
 header {
-	background-color: var(--transp-plum);
+	background-color: hsl(315 17% 41% / 70%);
 	width: 100%;
 	padding-block: clamp(0.5rem, -0.2vh + 1.9vh, 2.5vh);
 	padding-inline: 2vw;
@@ -142,15 +141,16 @@ footer {
 		backdrop-filter: blur(2px);
 		text-shadow: 1px 1px 1px black;
 		width: fit-content;
-		margin-top: 0.8em;
+		margin-top: 0.4em;
 	}
 
 	a:link,
 	a:visited {
+		font-size: calc(.975 * var(--small-text));
 		color: var(--light-plum);
 		display: block;
 		text-decoration-line: none;
-		margin-top: .25em;
+		margin-top: 0.6em;
 	}
 }
 
@@ -159,7 +159,7 @@ footer {
 /* ================================================= */
 
 button {
-	background-color: var(--transp-plum);
+	background-color: hsl(315 17% 41% / 80%);
 	color: var(--white);
 	font-size: var(--small-text);
 	font-weight: 350;
@@ -168,28 +168,28 @@ button {
 	text-shadow: 0 0 1px black;
 	border: 1px solid var(--medium-plum);
 	border-radius: 9px;
-	box-shadow: 3px 3px 1px hsl(315 25% 30% / 60%);
-	height: 44px;
-	padding-inline: 2.2em;
-	width: 100%;
+	box-shadow: 3px 3px 1px hsl(315 25% 30% / 70%);
+	padding-inline: 1.8em;
+	flex: 0 0 45px;
 }
 
 @media (hover: hover) {
 	button:hover {
-		background-color: hsla(315, 16%, 40%, 0.75);
-		box-shadow: 3px 3px hsla(315, 26%, 30%, 0.75);
+		background-color: hsl(315 16% 33% / 90%);
+		box-shadow: 3px 3px hsla(315 26% 33% / 90%);
+		transition-duration: 100ms;
 	}
 }
 
 button:active {
-	background-color: hsl(315, 16%, 38%, 0.9);
-	box-shadow: 2px 2px hsl(315, 26%, 34, 0.9%);
-	transform: translateY(1px) translateX(1px) scale(98%);
+	background-color: hsl(315 16% 28% / 90%);
+	box-shadow: 2px 2px hsl(315 26% 28% / 90%);
+	transform: translateY(1px) translateX(1px) scale(99%);
+	transition-duration: 300ms;
 }
 
-/* TODO: Add fade in/out */
 #valentine-container {
-	display: none;
+	display: flex;
 	overflow: hidden;
 	min-height: 0;
 	background-color: var(--white);
@@ -197,6 +197,11 @@ button:active {
 	border: var(--black) 2px solid;
 	width: fit-content;
 	max-width: 420px;
+	opacity: 0;
+
+	& * {
+		opacity: 0;
+	}
 }
 
 .inner-valentine-container {
@@ -243,6 +248,16 @@ p.valentine-words.bottom {
 	bottom: 0;
 }
 
+#valentine-container.fade-in, #valentine-container.fade-in * {
+	transition: ease-in 400ms;
+	opacity: 1;
+}
+
+#valentine-container.fade-out, #valentine-container.fade-out * {
+	transition: ease-out 600ms;
+	opacity: 0;
+}
+
 /* ================================================= */
 /* ================= MEDIA QUERIES ================= */
 /* ================================================= */
@@ -270,8 +285,18 @@ p.valentine-words.bottom {
 		}
 
 		.footer-bottom-line {
-			margin-top: 0.6em;
+			margin-top: 0.5em;
 			width: max(62%, 420px);
+		}
+
+		>p {
+			font-size: calc(.8 * var(--small-text));
+			margin-top: 0.5em;
+		}
+
+		/* TODO: Fix this - its specificity is too low */
+		>a, a:link, a:visited {
+			font-size: calc(.94 * var(--small-text));
 		}
 	}
 
