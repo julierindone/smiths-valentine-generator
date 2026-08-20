@@ -217,7 +217,7 @@ button:active {
 }
 
 p.valentine-words {
-	font-size: clamp(0.9rem, -0.2rem + 7.5vw, 1.8rem);
+	font-size: clamp(0.9rem, 0.1rem + 5.6vw, 1.45rem);
 	color: var(--light-plum);
 	font-weight: 900;
 	text-align: center;
@@ -225,23 +225,22 @@ p.valentine-words {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%);
-	width: 100%;
-	text-shadow: 0 0 5px black;
+	width: 99%;
+	text-shadow: 0.5px 0.5px 5px black;
 	letter-spacing: -0.3px;
 	line-height: 1.17;
 	text-transform: uppercase;
 	padding: 0 0.32rem;
 	backdrop-filter: blur(1px);
+	margin-block: 0.5em;
 }
 
 p.valentine-words.top {
 	top: 0;
-	margin-top: 0.45em;
 }
 
 p.valentine-words.bottom {
 	bottom: 0;
-	margin-bottom: 0.45em;
 }
 
 /* ================================================= */
@@ -285,6 +284,10 @@ p.valentine-words.bottom {
 	.subheading {
 		font-size: clamp(0.7rem, 0.2rem + 2.4vw, 1.5rem);
 		margin-top: .125em;
+	}
+
+	#valentine-container {
+		max-width: 450px;
 	}
 
 	p.valentine-words {

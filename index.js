@@ -22,12 +22,13 @@ function generateValentine() {
 }
 
 function getRandomQuote() {
-	let indexToGet = Math.floor(Math.random(0, quotes.length) * quotes.length)
+	let indexToGet = Math.floor(Math.random() * quotes.length)
 	return quotes[indexToGet]
 }
 
 function getRandomImage() {
-	let number = Math.floor(Math.random(0, 9) * 9)
+	let number = Math.floor(Math.random() * 11)
+	console.log(`number is ${number}`)
 	return `images/all/image${number}.jpg`
 }
 

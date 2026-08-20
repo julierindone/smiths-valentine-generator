@@ -73,12 +73,12 @@ export const quotes = [
 	},
 	{
 		lineOne: `And if a double-decker bus crashes into us,`,
-		lineTwo: `To die by your side, is such a heavenly way to die!`,
+		lineTwo: `To die by your side, is such a heavenly way to die.`,
 		artist: `The Smiths`
 	},
 	{
 		lineOne: `Sweetness, I was only joking when I said`,
-		lineTwo: `I'd like to smash every tooth in you head!`,
+		lineTwo: `I'd like to smash every tooth in you head.`,
 		artist: `The Smiths`
 	},
 	{
@@ -133,7 +133,7 @@ export const quotes = [
 	},
 	{
 		lineOne: `If you ever need self validation,`,
-		lineTwo: `Just meet me in the alley by the railway station`,
+		lineTwo: `Meet me in the alley by the railway station`,
 		artist: `The Smiths`
 	},
 	{
@@ -172,8 +172,8 @@ export const quotes = [
 		artist: `Morrissey`
 	},
 	{
-		lineOne: `<span style="font-size: 0.8em;">I never wanted to kill, I am not naturally evil!</span>`,
-		lineTwo: `<span style="font-size: 0.8em";>Such things I do, Just to make myself more attractive to you,<br><em>Have I failed?</em></span`,
+		lineOne: `<span style="font-size: 0.85em;">I never wanted to kill, I am not naturally evil!</span>`,
+		lineTwo: `<span style="font-size: 0.78em";>Such things I do, Just to make myself more attractive to you!</span`,
 		artist: `The Smiths`
 	},
 	{
@@ -182,8 +182,8 @@ export const quotes = [
 		artist: `The Smiths`
 	},
 	{
-		lineOne: `Please, Valentine,`,
-		lineTwo: `Let me get my hands on your mammary glands`,
+		lineOne: `Let me get my hands`,
+		lineTwo: `on your mammary glands`,
 		artist: `The Smiths`
 	},
 	{
@@ -197,40 +197,88 @@ export const quotes = [
 		artist: `The Smiths`
 	},
 	{
-		lineOne: `<span style="font-size:0.85em;">There's more to life than books, you know (but not much more)</span>`,
-		lineTwo: `<span style="font-size:1.3em;">Oh, you handsome devil!</span>`,
+		lineOne: `<span style="font-size: 0.9em">There's more to life than books, you know...</span`,
+		lineTwo: `Like <em>me</em>, Valentine!</span>`,
 		artist: `The Smiths`
 	},
+	// {
+	// 	lineOne: `I want the one I can't have`,
+	// 	lineTwo: `And it's driving me mad!`,
+	// 	artist: `The Smiths`
+	// },
+	// {
+	// 	lineOne: `<span style="font-size:0.85em;">On the day when your mentality catches up with your biology,`,
+	// 	lineTwo: `<span style="font-size:1.2em;">Come 'round!</span>`,
+	// 	artist: `The Smiths`
+	// },
+	// {
+	// 	lineOne: `Do you love me like you used to,`,
+	// 	lineTwo: `Valentine?`,
+	// 	artist: `The Smiths`
+	// },
+	// {
+	// 	lineOne: `The hills were alive with celibate cries`,
+	// 	lineTwo: `Until you came along.`,
+	// 	artist: `The Smiths`
+	// },
+	// {
+	// 	lineOne: `We may be hidden by rags`,
+	// 	lineTwo: `But we've something they'll never have.`,
+	// 	artist: `The Smiths`
+	// },
+	// {
+	// 	lineOne: `When you cycled by`,
+	// 	lineTwo: `Here began all my dreams.`,
+	// 	artist: `The Smiths`,
+	// 	songTitle: `Back to the Old House`
+	// },
 	{
-		lineOne: `I want the one I can't have`,
-		lineTwo: `And it's driving me mad!`,
-		artist: `The Smiths`
-	},
-	{
-		lineOne: `<span style="font-size:0.9em;">On the day when your mentality catches up with your biology,`,
-		lineTwo: `<span style="font-size:1.2em;">Come 'round!</span>`,
-		artist: `The Smiths`
-	},
-	{
-		lineOne: `Do you love me like you used to,`,
-		lineTwo: `Valentine?`,
-		artist: `The Smiths`
-	},
-	{
-		lineOne: `The hills were alive with celibate cries`,
-		lineTwo: `Until you came along.`,
-		artist: `The Smiths`
-	},
-	{
-		lineOne: `We may be hidden by rags`,
-		lineTwo: `But we've something they'll never have.`,
-		artist: `The Smiths`
-	},
-	{
-		lineOne: `When you cycled by`,
-		lineTwo: `Here began all my dreams.`,
+		lineOne: `I'm in love for the first time`,
+		lineTwo: `and I don't feel bad`,
 		artist: `The Smiths`,
-		songTitle: `Back to the Old House`
+		songTitle: `Break up the Family`
+	},
+	{
+		lineOne: `Give in to lust!<br/>Give up to lust!`,
+		lineTwo: `Heaven knows we'll soon be dust!`,
+		artist: `The Smiths`,
+		songTitle: `Pretty Girls Make Graves`
+	},
+	{
+		lineOne: `You are all that matters,`,
+		lineTwo: `And I'll love you till the day I die.`,
+		artist: `The Smiths`,
+		songTitle: `The Hand That Rocks the Cradle`
+	},
+	{
+		lineOne: `Does the body rule the mind,`,
+		lineTwo: `Or does the mind rule the body?`,
+		artist: `The Smiths`,
+		songTitle: `Still Ill`
+	},
+	{
+		lineOne: `I look at yours, you laugh at mine,`,
+		lineTwo: `And love is just a miserable lie.`,
+		artist: `The Smiths`,
+		songTitle: `Miserable Lie`
+	},
+	{
+		lineOne: `<span style="font-size: 1.3em">Valentine,</span>`,
+		lineTwo: `I'd like to sieze your underwear,`,
+		artist: `The Smiths`,
+		songTitle: `Miserable Lie`
+	},
+	{
+		lineOne: `<span style="font-size: 0.9em">Please, please, please, let me get what I want.</span>`,
+		lineTwo: `(What I want is <em>you</em>, Valentine.)`,
+		artist: `The Smiths`,
+		songTitle: `Please, Please, Please, Let Me Get What I Want`
+	},
+	{
+		lineOne: `<em>Oh, Christ,</em>`,
+		lineTwo: `Another Stifled Valentine's Day night.`,
+		artist: `The Smiths`,
+		songTitle: `Maladjusted`
 	},
 ]
 
