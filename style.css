@@ -211,6 +211,7 @@ button:active {
 	border: var(--black) 2.5px solid;
 	z-index: 1;
 	position: relative;
+	aspect-ratio: 10/14;
 }
 
 #valentine-image {

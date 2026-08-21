@@ -82,7 +82,7 @@ export const quotes = [
 		artist: `The Smiths`
 	},
 	{
-		lineOne: `I don't mind...`,
+		lineOne: `<span style="font-size: 1.1em">I don't mind...</span>`,
 		lineTwo: `I don't mind if you forget me.`,
 		artist: `Morrissey`
 	},
@@ -264,7 +264,7 @@ export const quotes = [
 	},
 	{
 		lineOne: `<span style="font-size: 1.3em">Valentine,</span>`,
-		lineTwo: `I'd like to sieze your underwear,`,
+		lineTwo: `I'd like to sieze your underwear`,
 		artist: `The Smiths`,
 		songTitle: `Miserable Lie`
 	},
